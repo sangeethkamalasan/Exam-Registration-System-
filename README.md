@@ -18,3 +18,23 @@ java -jar minorproject.jar
 
 Keep the `lib/` directory next to `minorproject.jar`; the JAR manifest uses those
 SQLite and SLF4J libraries at runtime.
+
+### Run in GitHub Codespaces
+
+The Swing application needs a display. Install the virtual desktop packages once
+in the Codespace:
+
+```sh
+sudo apt-get update
+sudo apt-get install -y xvfb x11vnc novnc fluxbox
+```
+
+Start the app and remote desktop:
+
+```sh
+python3 run-codespace-desktop.py
+```
+
+In the Codespaces **Ports** tab, keep port `6080` private and open its forwarded
+address. The launcher prints a direct noVNC link. Close the app or stop the
+launcher with Ctrl+C when finished.
